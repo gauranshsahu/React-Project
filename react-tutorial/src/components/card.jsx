@@ -1,9 +1,31 @@
 import React from 'react'
-
-const card = () => {
+import Image from '../assets/photo.jpg'
+const card = (props) => {
   return (
-    <div className='card'>
-      <h1>Gauransh</h1>
+    <div className='card-main'>
+      <div className='card-wrapper'>
+        <div className='image-text-wrapper'>
+          <img className='crad-image' src={Image}></img>
+          <p className='card-saved'>saved</p>
+        </div>
+        <div className='card-comapany'>
+          <p>{props.company}</p>
+          <span>{props.date}</span>
+        </div>
+        <div className='card-content'>
+          <p className='card-name'>{props.user}</p>
+          <div className='card-time'>
+            <div className='card-time-icon'>{props.time}</div>
+            <div className='card-time-icon'>{props.time2}</div>
+          </div>
+          <div className='card-bottom'>
+            <div className='bottom-wrapper'>
+              <p className='card-age'>{props.age}</p>
+              <button>View Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
