@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from '../assets/photo.jpg'
+import { Bookmark } from 'lucide-react'
 const card = (props) => {
   return (
     <div className='card-main'>
       <div className='card-wrapper'>
         <div className='image-text-wrapper'>
           <img className='crad-image' src={Image}></img>
-          <p className='card-saved'>saved</p>
+          <p className='card-saved'>saved <Bookmark /></p>
         </div>
         <div className='card-comapany'>
           <p>{props.company}</p>
